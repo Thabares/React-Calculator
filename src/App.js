@@ -159,6 +159,7 @@ function App() {
 
   const reset = () => {
     setValue("")
+    setResult("")
   }
 
   const handleSwitch = () => {
