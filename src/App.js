@@ -135,12 +135,11 @@ function App() {
   const ops = ['/', '*', '+', '-', '.']
 
   const handleInput = (input) => {
-    if (ops.includes(input) && value === '' ||
-      ops.includes(input) && ops.includes(value.slice(-1))) {
+    if ((ops.includes(input) && value === '') ||
+      (ops.includes(input) && ops.includes(value.slice(-1)))) {
       return
     }
     setValue((prev) => prev + input)
-
     if (!ops.includes(input)) {
       setResult(eval(value + input).toString())
     }
